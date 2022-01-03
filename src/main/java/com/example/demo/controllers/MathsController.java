@@ -61,6 +61,12 @@ public class MathsController {
 		return new ResponseEntity<List<Customer>>(repository.GetAll(),HttpStatus.OK);
 	}
 	
+	@GetMapping("/Ping")
+	public String Ping()
+	{
+		return "Ping Pong";
+	}
+	
 	@DeleteMapping("/Customers")
 	public ResponseEntity<Boolean> DeleteCustomer(@RequestBody Customer customer)
 	{
